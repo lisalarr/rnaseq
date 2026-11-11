@@ -13,6 +13,15 @@ The samples are from *Mus musculus*. The libraries are strand-specific (RF) and 
 The study describes how type I and type II interferon (IFN) signalling shapes the host transcriptional response to infection.
 Here, wild type mice and mice lacking both the type I and type II IFN receptors (*Ifnar1*/*Ifngr1* double knockout, DKO) are compared, with and without *Toxoplasma gondii* infection.
 
+| Group | Genotype | Infection | Samples |
+|---|---|---|---|
+| Lung_WT_Case | Wild type | *T. gondii* | 5 |
+| Lung_WT_Control | Wild type | Uninfected | 3 |
+| Lung_DKO_Case | IFNAR/IFNGR DKO | *T. gondii* | 4 |
+| Lung_DKO_Control | IFNAR/IFNGR DKO | Uninfected | 3 |
+
+Sample IDs: [`metadata/samples.tsv`](metadata/samples.tsv)
+
 ## Workflow 
 | Step | Description | Tool | Scripts |
 |---|---|---|---|

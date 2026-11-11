@@ -1,5 +1,6 @@
 # Raw data and reference files
 raw_data
+reference/
 *.fastq
 *.fastq.gz
 *.fq.gz
@@ -15,8 +16,7 @@ raw_data
 *.bai
  
 # Large outputs
-fastqc/*.zip
-*.log
+*_fastqc.zip
 slurm-*.out
  
 # R / RStudio
