@@ -1,5 +1,25 @@
+# Raw data and reference files
 raw_data
-results/
-logs/
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.fa
+*.fa.gz
+*.gtf
+*.gtf.gz
+*.ht2
+ 
+# Alignment files
+*.sam
 *.bam
 *.bai
+ 
+# Large outputs
+fastqc/*.zip
+*.log
+slurm-*.out
+ 
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/

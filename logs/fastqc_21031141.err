@@ -1,0 +1,46 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_ADDRESS = "en_AU.UTF-8",
+	LC_IDENTIFICATION = "en_AU.UTF-8",
+	LC_MEASUREMENT = "en_AU.UTF-8",
+	LC_MONETARY = "en_AU.UTF-8",
+	LC_NAME = "en_AU.UTF-8",
+	LC_NUMERIC = "en_AU.UTF-8",
+	LC_PAPER = "en_AU.UTF-8",
+	LC_TELEPHONE = "en_AU.UTF-8",
+	LC_TIME = "en_AU.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Skipping 'raw_data/SRR7821918_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821918_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821919_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821919_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821920_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821920_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821921_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821921_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821922_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821922_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821923_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821923_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821924_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821924_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821925_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821925_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821927_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821927_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821937_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821937_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821938_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821938_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821939_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821939_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821940_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821940_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821941_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821941_2.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821942_1.fastq.gz' which didn't exist, or couldn't be read
+Skipping 'raw_data/SRR7821942_2.fastq.gz' which didn't exist, or couldn't be read
