@@ -23,23 +23,72 @@ Here, wild type mice and mice lacking both the type I and type II IFN receptors 
 Sample IDs: [`metadata/samples.tsv`](metadata/samples.tsv)
 
 ## Workflow 
+```
+FASTQ ──► FastQC + MultiQC ──► fastp trimming ──► FastQC + MultiQC
+                                                        │
+                                                        ▼
+Reference genome ──► HISAT2 index ──► HISAT2 mapping ──► Samtools (sort/index)
+                                                                │
+                                                                ▼
+                                                          featureCounts
+                                                                │
+                                                                ▼
+                                        DESeq2: EDA (VST, PCA) + DE analysis
+                                                                │
+                                                                ▼
+                                              clusterProfiler: GO enrichment
+```
+
 | Step | Description | Tool | Scripts |
 |---|---|---|---|
-| Quality checks | Quality control of raw reads and summary report; trimming and QC of trimmed reads | FastQC, MultiQC, fastp | `01_fastqc.sh`<br>`02_multiqc.sh`<br>`03_fastqc_trimmed.sh`<br>`04_multiqc_trimmed.sh` |
-| Map reads to reference genome | Download genome + annotation (Ensembl) and verify checksums; build index; map reads; convert SAM → BAM, sort and index | HISAT2, Samtools | `05_build.sh`<br>`06_map.sh` |
+| Getting started | Set up working directory, link raw data, initialise Git repository, create sample sheet | Git, Apptainer | – |
+| Quality checks | Quality control of raw reads and summary report; adapter/quality trimming and QC of trimmed reads | FastQC, MultiQC, fastp | [`01_fastqc.sh`](scripts/01_fastqc.sh)<br>[`02_multiqc.sh`](scripts/02_multiqc.sh)<br>[`03_fastqc_trimmed.sh`](scripts/03_fastqc_trimmed.sh)<br>[`04_multiqc_trimmed.sh`](scripts/04_multiqc_trimmed.sh) |
+| Map reads to the reference genome | Download genome + annotation (Ensembl) and verify checksums (manually, see below); build index; map trimmed reads; sort and index BAM files | HISAT2, Samtools | [`05_build.sh`](scripts/05_build.sh)<br>[`06_map.sh`](scripts/06_map.sh) |
 | Count reads per gene | Count reads per gene from all BAM files | featureCounts | |
 | Exploratory data analysis | Create DESeqDataSet, variance-stabilising transformation, PCA | DESeq2 | |
 | Differential expression analysis | Extract results for pairwise contrast(s), count up-/down-regulated genes (padj < 0.05), normalised counts of genes of interest | DESeq2 | |
 | Overrepresentation analysis | GO enrichment of DE genes against all measured genes | clusterProfiler, org.Mm.eg.db | |
 
+## Software and reference
+ 
+| | Version |
+|---|---|
+| Reference genome | GRCm39, Ensembl release 116 |
+| FastQC | 0.12.1 |
+| MultiQC | 1.33 |
+| fastp | 0.24.1 |
+| HISAT2 / Samtools | 2.2.1 / 1.20 |
+ 
+Cluster tools were run in Apptainer containers from `/containers/apptainer/`. Container paths and Slurm resources are listed in the script headers.
+ 
+Reference files were downloaded manually from Ensembl release 116 (`Mus_musculus.GRCm39.dna.primary_assembly.fa.gz`, `Mus_musculus.GRCm39.116.gtf.gz`) and verified with `sum` against the Ensembl CHECKSUMS files
+
 ## Repository structure 
 ```
-scripts/     analysis scripts, numbered in run order
-metadata/    sample sheet
-results/     small outputs only (QC summaries, count summary, figures, tables)
-report/      final report
+.
+├── logs
+│   ├── 01_fastqc
+│   ├── 02_multiqc
+│   ├── 03_fastqc_trimmed
+│   ├── 04_multiqc_trimmed
+│   ├── 05_build
+│   └── 06_map
+├── metadata
+├── raw_data -> /data/courses/rnaseq_course/toxoplasma_de/reads_Lung
+├── reference
+│   ├── hisat2_index
+│   └── logs
+├── results
+│   ├── 01_fastqc
+│   ├── 03_fastqc_trimmed
+│   ├── 03_trimmed_reads
+│   └── 04_multiqc_trimmed
+└── scripts
 ```
-Raw data, reference files and BAM/SAM files are not tracked (see `.gitignore`).
+
+Subfolders in `logs/` and `results/` use the same numbers as the scripts that produce them.
+Raw data, reference files, trimmed reads and BAM files are not tracked (see `.gitignore`).
 
 ## References 
-Singhania A, et al. (2019). Transcriptional profiling unveils type I and II interferon networks in blood and tissues across diseases. *Nature Communications* 10, 2887. https://doi.org/10.1038/s41467-019-10601-6
+- Singhania A, et al. (2019). Transcriptional profiling unveils type I and II interferon networks in blood and tissues across diseases. *Nature Communications* 10, 2887. https://doi.org/10.1038/s41467-019-10601-6.
+- Course instructions: *Detect differentially expressed genes from bulk RNA-seq data*. RNA-Seq course (467713), University of Bern, AS 2026.
