@@ -1,0 +1,103 @@
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+CATCACCCCACATCTACAGACACCAAAGCCTCCAACCTCTACCATGAAGATCGCCATCAC
+
+Read1 before filtering:
+total reads: 44881449
+total bases: 3410990124
+Q20 bases: 3368869090(98.7651%)
+Q30 bases: 3286722764(96.3569%)
+
+Read2 before filtering:
+total reads: 44881449
+total bases: 3410990124
+Q20 bases: 3277349054(96.082%)
+Q30 bases: 3079735578(90.2886%)
+
+Read1 after filtering:
+total reads: 44371580
+total bases: 3370477823
+Q20 bases: 3331846503(98.8538%)
+Q30 bases: 3254475570(96.5583%)
+
+Read2 after filtering:
+total reads: 44371580
+total bases: 3369638181
+Q20 bases: 3253285248(96.547%)
+Q30 bases: 3064959633(90.9581%)
+
+Filtering result:
+reads passed filter: 88743160
+reads failed due to low quality: 897400
+reads failed due to too many N: 3966
+reads failed due to too short: 118372
+reads with adapter trimmed: 491007
+bases trimmed due to adapters: 8528333
+
+Duplication rate: 24.5093%
+
+Insert size peak (evaluated by paired-end reads): 121
+
+JSON report: /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_fastp.json
+HTML report: /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_fastp.html
+
+/usr/local/bin/fastp -i raw_data/SRR7821937_1.fastq.gz -I raw_data/SRR7821937_2.fastq.gz -o /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_1.trimmed.fastq.gz -O /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_2.trimmed.fastq.gz --detect_adapter_for_pe -w 4 -j /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_fastp.json -h /data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821937_fastp.html 
+fastp v0.24.1, time used: 255 seconds
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_ADDRESS = "en_AU.UTF-8",
+	LC_IDENTIFICATION = "en_AU.UTF-8",
+	LC_MEASUREMENT = "en_AU.UTF-8",
+	LC_MONETARY = "en_AU.UTF-8",
+	LC_NAME = "en_AU.UTF-8",
+	LC_NUMERIC = "en_AU.UTF-8",
+	LC_PAPER = "en_AU.UTF-8",
+	LC_TELEPHONE = "en_AU.UTF-8",
+	LC_TIME = "en_AU.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Started analysis of SRR7821937_1.trimmed.fastq.gz
+Started analysis of SRR7821937_2.trimmed.fastq.gz
+Approx 5% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 5% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 10% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 10% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 15% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 15% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 20% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 20% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 25% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 25% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 30% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 30% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 35% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 35% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 40% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 40% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 45% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 45% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 50% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 50% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 55% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 55% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 60% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 60% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 65% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 65% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 70% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 70% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 75% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 75% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 80% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 80% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 85% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 85% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 90% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 90% complete for SRR7821937_2.trimmed.fastq.gz
+Approx 95% complete for SRR7821937_1.trimmed.fastq.gz
+Approx 95% complete for SRR7821937_2.trimmed.fastq.gz

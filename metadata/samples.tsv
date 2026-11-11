@@ -1,16 +1,16 @@
 sample	genotype	infection	group
-SRR7821918WTCaseLung_WT_Case
-SRR7821919WTCaseLung_WT_Case
-SRR7821920WTCaseLung_WT_Case
-SRR7821921WTCaseLung_WT_Case
-SRR7821922WTCaseLung_WT_Case
-SRR7821937WTControlLung_WT_Control
-SRR7821938WTControlLung_WT_Control
-SRR7821939WTControlLung_WT_Control
-SRR7821923DKOCaseLung_DKO_Case
-SRR7821924DKOCaseLung_DKO_Case
-SRR7821925DKOCaseLung_DKO_Case
-SRR7821927DKOCaseLung_DKO_Case
-SRR7821940DKOControlLung_DKO_Control
-SRR7821941DKOControlLung_DKO_Control
-SRR7821942DKOControlLung_DKO_Control
+SRR7821918	WT	Case	Lung_WT_Case
+SRR7821919	WT	Case	Lung_WT_Case
+SRR7821920	WT	Case	Lung_WT_Case
+SRR7821921	WT	Case	Lung_WT_Case
+SRR7821922	WT	Case	Lung_WT_Case
+SRR7821937	WT	Control	Lung_WT_Control
+SRR7821938	WT	Control	Lung_WT_Control
+SRR7821939	WT	Control	Lung_WT_Control
+SRR7821923	DKO	Case	Lung_DKO_Case
+SRR7821924	DKO	Case	Lung_DKO_Case
+SRR7821925	DKO	Case	Lung_DKO_Case
+SRR7821927	DKO	Case	Lung_DKO_Case
+SRR7821940	DKO	Control	Lung_DKO_Control
+SRR7821941	DKO	Control	Lung_DKO_Control
+SRR7821942	DKO	Control	Lung_DKO_Control
