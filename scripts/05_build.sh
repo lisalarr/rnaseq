@@ -4,15 +4,22 @@
 #SBATCH --job-name=hisat2_build
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=16G
-#SBATCH --time=02:00:00
-#SBATCH --output=logs/hisat2_build_%j.out
-#SBATCH --error=logs/hisat2_build_%j.err
+#SBATCH --time=03:00:00
+#SBATCH --output=logs/05_build/%x_%j.out
+#SBATCH --error=logs/05_build/%x_%j.err
 
+# Build HISAT2 index for mouse reference 
+# Reference: GRCm39, Ensembl release 116 (downloaded manually, checksums verified)
+# Tool: HISAT2 2.2.1
+
+WORKDIR=/data/users/llarrass/rnaseq
+REFDIR=$WORKDIR/reference
 SIF=/containers/apptainer/hisat2_samtools_408dfd02f175cd88.sif
-mkdir -p reference/hisat2_index
-gunzip -k reference/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
 
-apptainer exec --bind /data/ $SIF \
+cd $WORKDIR
+mkdir -p $REFDIR/hisat2_index
+
+apptainer exec --bind /data:/data $SIF \
     hisat2-build -p 8 \
-    reference/Mus_musculus.GRCm39.dna.primary_assembly.fa \
-    reference/hisat2_index/genome
+    $REFDIR/Mus_musculus.GRCm39.dna.primary_assembly.fa \
+    $REFDIR/hisat2_index/genome
