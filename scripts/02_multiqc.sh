@@ -8,6 +8,14 @@
 #SBATCH --output=logs/multiqc_%j.out
 #SBATCH --error=logs/multiqc_%j.err
 
+# Summary report of FastQC results (raw reads)
 # Tool: MultiQC 1.33
+
+WORKDIR=/data/users/llarrass/rnaseq
+OUTDIR=$WORKDIR/results/02_multiqc
+
+cd $WORKDIR
+mkdir -p $OUTDIR
+
 apptainer exec --bind /data:/data /containers/apptainer/multiqc-1.33.sif \
     multiqc results/01_fastqc -o results/01_fastqc/multiqc

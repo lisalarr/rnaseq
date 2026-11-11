@@ -8,6 +8,14 @@
 #SBATCH --output=logs/fastqc_%j.out
 #SBATCH --error=logs/fastqc_%j.err
 
+# Quality control of raw reads
 # Tool: FastQC 0.12.1
+
+WORKDIR=/data/users/llarrass/rnaseq
+OUTDIR=$WORKDIR/results/01_fastqc
+
+cd $WORKDIR
+mkdir -p $OUTDIR
+
 apptainer exec --bind /data:/data /containers/apptainer/fastqc-0.12.1.sif \
     fastqc -t 4 -o results/01_fastqc raw_data/*.f*q.gz
