@@ -1,0 +1,19 @@
+ERROR: Failed to open file: raw_data/SRR7821924DKOCaseLung_DKO_Case_1.fastq.gz
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_ADDRESS = "en_AU.UTF-8",
+	LC_IDENTIFICATION = "en_AU.UTF-8",
+	LC_MEASUREMENT = "en_AU.UTF-8",
+	LC_MONETARY = "en_AU.UTF-8",
+	LC_NAME = "en_AU.UTF-8",
+	LC_NUMERIC = "en_AU.UTF-8",
+	LC_PAPER = "en_AU.UTF-8",
+	LC_TELEPHONE = "en_AU.UTF-8",
+	LC_TIME = "en_AU.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Skipping '/data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821924DKOCaseLung_DKO_Case_1.trimmed.fastq.gz' which didn't exist, or couldn't be read
+Skipping '/data/users/llarrass/rnaseq/results/03_trimmed_reads/SRR7821924DKOCaseLung_DKO_Case_2.trimmed.fastq.gz' which didn't exist, or couldn't be read

@@ -1,0 +1,8 @@
+
+/// MultiQC 🔍 v1.33
+
+     version_check | MultiQC Version v1.35 now available!
+       file_search | Search path: /data/users/llarrass/rnaseq/results/03_trimmed_reads
+       file_search | Search path: /data/users/llarrass/rnaseq/results/03_fastqc_trimmed
+
+           multiqc | No analysis results found. Cleaning up…
