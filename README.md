@@ -23,20 +23,9 @@ Here, wild type mice and mice lacking both the type I and type II IFN receptors 
 Sample IDs: [`metadata/samples.tsv`](metadata/samples.tsv)
 
 ## Workflow 
+Adapted from the DifferentialGeneExpression_projects slides provided in the course (slide 5): 
 ```
-FASTQ ──► FastQC + MultiQC ──► fastp trimming ──► FastQC + MultiQC
-                                                        │
-                                                        ▼
-Reference genome ──► HISAT2 index ──► HISAT2 mapping ──► Samtools (sort/index)
-                                                                │
-                                                                ▼
-                                                          featureCounts
-                                                                │
-                                                                ▼
-                                        DESeq2: EDA (VST, PCA) + DE analysis
-                                                                │
-                                                                ▼
-                                              clusterProfiler: GO enrichment
+todo
 ```
 
 | Step | Description | Tool | Scripts |
