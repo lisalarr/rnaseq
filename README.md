@@ -33,7 +33,7 @@ todo
 | Getting started | Set up working directory, link raw data, initialise Git repository, create sample sheet | Git, Apptainer | – |
 | Quality checks | Quality control of raw reads and summary report; adapter/quality trimming and QC of trimmed reads | FastQC, MultiQC, fastp | [`01_fastqc.sh`](scripts/01_fastqc.sh)<br>[`02_multiqc.sh`](scripts/02_multiqc.sh)<br>[`03_fastqc_trimmed.sh`](scripts/03_fastqc_trimmed.sh)<br>[`04_multiqc_trimmed.sh`](scripts/04_multiqc_trimmed.sh) |
 | Map reads to the reference genome | Download genome + annotation (Ensembl) and verify checksums (manually, see below); build index; map trimmed reads; sort and index BAM files | HISAT2, Samtools | [`05_build.sh`](scripts/05_build.sh)<br>[`06_map.sh`](scripts/06_map.sh) |
-| Count reads per gene | Count reads per gene from all BAM files | featureCounts | |
+| Count reads per gene | Count reads per gene from all BAM files | featureCounts |[`07_featurecounts.sh`](scripts/07_featurecounts.sh) |
 | Exploratory data analysis | Create DESeqDataSet, variance-stabilising transformation, PCA | DESeq2 | |
 | Differential expression analysis | Extract results for pairwise contrast(s), count up-/down-regulated genes (padj < 0.05), normalised counts of genes of interest | DESeq2 | |
 | Overrepresentation analysis | GO enrichment of DE genes against all measured genes | clusterProfiler, org.Mm.eg.db | |
@@ -61,18 +61,35 @@ Reference files were downloaded manually from Ensembl release 116 (`Mus_musculus
 │   ├── 03_fastqc_trimmed
 │   ├── 04_multiqc_trimmed
 │   ├── 05_build
-│   └── 06_map
+│   ├── 06_map
+│   └── 07_featurecounts
 ├── metadata
+│   └── samples.tsv
 ├── raw_data -> /data/courses/rnaseq_course/toxoplasma_de/reads_Lung
+├── README.md
 ├── reference
+│   ├── CHECKSUMS_fasta
+│   ├── CHECKSUMS_gtf
 │   ├── hisat2_index
-│   └── logs
+│   ├── Mus_musculus.GRCm39.116.gtf
+│   ├── Mus_musculus.GRCm39.116.gtf.gz
+│   ├── Mus_musculus.GRCm39.dna.primary_assembly.fa
+│   └── Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
 ├── results
 │   ├── 01_fastqc
 │   ├── 03_fastqc_trimmed
 │   ├── 03_trimmed_reads
-│   └── 04_multiqc_trimmed
+│   ├── 04_multiqc_trimmed
+│   ├── 06_mapping
+│   └── 07_featurecounts
 └── scripts
+    ├── 01_fastqc.sh
+    ├── 02_multiqc.sh
+    ├── 03_fastqc_trimmed.sh
+    ├── 04_multiqc_trimmed.sh
+    ├── 05_build.sh
+    ├── 06_map.sh
+    └── 07_featurecounts.sh
 ```
 
 Subfolders in `logs/` and `results/` use the same numbers as the scripts that produce them.
